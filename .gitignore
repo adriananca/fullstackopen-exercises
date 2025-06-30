@@ -1,22 +1,22 @@
 # Sistema Operativo y Editores
 .DS_Store
-.vscode/ # Si usas VS Code y no quieres compartir la configuración de tu workspace
-.idea/   # Si usas WebStorm/IntelliJ
+.vscode/
+.idea/
 
-# Node.js / Dependencias (Común en proyectos JS)
-node_modules/
+# Node.js / Dependencias (Ignora cualquier node_modules en cualquier nivel)
+**/node_modules/
 
-# Archivos de caché y generados por herramientas de build
-part1/.vite/
-dist/
-build/
-coverage/
+# Archivos de caché y generados por Vite (Ignora cualquier .vite/ y dist/ en cualquier nivel)
+**/.vite/
+**/dist/
+**/build/
+**/coverage/
 
-# Logs y bases de datos locales
+# Logs y variables de entorno sensibles
 *.log
 *.sqlite
-.env # Si usas variables de entorno sensibles (crea un .env.example)
+.env
 
-# Archivos de paquetes (Si generas .zip, .tar, etc.)
+# Archivos de paquetes
 *.zip
 *.tar.gz
