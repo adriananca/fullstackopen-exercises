@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { id: 1, name: 'Arto Hellas' }
+    { name: 'Arto Hellas' }
   ]) 
   const [newName, setNewName] = useState('')
 
@@ -14,7 +14,6 @@ const App = () => {
     event.preventDefault()
 
     const newObject = { 
-      id: persons.length + 1,
       name: newName 
     }
 
@@ -35,18 +34,14 @@ const App = () => {
       </form>
       <h2>Numbers</h2>
         { persons.map(person => (
-          <Person key={person.id} person={person} />
+          <Person key={person.name} person={person} />
         ))}
     </div>
   )
 }
 
-const Person = ( { person } ) => {
-  return (
-    <div>
-      { person.name }
-    </div>
-  )
-}
+const Person = ( { person } ) => 
+    <div>{ person.name }</div>
+
 
 export default App
